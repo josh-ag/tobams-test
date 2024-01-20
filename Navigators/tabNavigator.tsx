@@ -157,7 +157,7 @@ export const TabNavigator = () => {
         tabBarStyle: styles.tabBarStyle,
       })}>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Menu" component={MenuStack} />
+      <Tab.Screen name="Menu" component={MenuScreen} />
       <Tab.Screen name="Cart" component={CartScreen} />
       <Tab.Screen name="Account" component={AccountScreen} />
     </Tab.Navigator>

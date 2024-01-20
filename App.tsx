@@ -1,14 +1,15 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {TabNavigator} from './Navigators/tabNavigator';
+// import {TabNavigator} from './Navigators/tabNavigator';
 import {Providers} from './Providers';
 import {theme} from './themeProvider';
+import {MenuStack} from './Navigators/menuStack';
 
 const App = () => {
   return (
     <Providers>
       <NavigationContainer theme={theme}>
-        <TabNavigator />
+        <MenuStack />
       </NavigationContainer>
     </Providers>
   );
