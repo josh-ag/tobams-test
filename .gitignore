@@ -2,6 +2,8 @@
 #
 .DS_Store
 
+assets/images/*.mp4
+
 # Xcode
 #
 build/

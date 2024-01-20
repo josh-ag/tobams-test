@@ -33,19 +33,22 @@
 
 
 **IOS Users:**
-> Repeat Step 1 and 2 above then continue with step 3
+
+_Be sure all the necessary requirement to build react-native IOS natively is met_
+> Repeat Step 1 and 2 above then continue with step 3 below
 
 **Step 3**
-```js
-    $pod install
+```bash
+$ cd ios
+$pod install
   ```  
 
 ```js
-    $ npm start
-  ``` 
+$ npm start
+``` 
 
   Depending on the Test time. This project might experience few more improvement but the above step to reproduce will remain unchange.
  
 _NB: if you encounter any difficulty running this app, be sure to review your development setup with respect to react-native [official documentation](https://reactnative.dev/docs/environment-setup)
 
-**I Hope we can build more amazing app together again**
+**I Hope we build more amazing app together again soonest**
