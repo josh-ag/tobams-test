@@ -184,7 +184,7 @@ const CartItemComponent = ({item}: {item: MenuType}) => {
 export const CartScreen = ({navigation}: any) => {
   const {carts} = useContext(AppContext);
 
-  const total = carts
+  const cartTotal = carts
     .map(cart => cart.amount)
     .reduce((accumulator, currentValue) => {
       return accumulator + currentValue;
@@ -237,7 +237,7 @@ export const CartScreen = ({navigation}: any) => {
                       color: '#151515',
                     },
                   ]}>
-                  &#163;{total}
+                  &#163;{cartTotal}
                 </Text>
               </View>
 
@@ -249,7 +249,7 @@ export const CartScreen = ({navigation}: any) => {
                     styles.text,
                     {color: '#fff', fontFamily: 'Poppins-Medium'},
                   ]}>
-                  Checkout - &#163;{total}
+                  Checkout - &#163;{cartTotal}
                 </Text>
               </TouchableOpacity>
             </View>
