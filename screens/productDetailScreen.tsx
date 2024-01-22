@@ -78,7 +78,6 @@ const ProductDetailsCard = ({item}: {item: MenuType}) => {
         sliderHeight={304}
         itemHeight={304}
         onSnapToItem={index => setActiveSlide(index)}
-        // layout="tinder"
       />
       <View style={styles.dots}>
         {item.images.map((_, i) => (

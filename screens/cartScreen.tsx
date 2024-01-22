@@ -184,6 +184,12 @@ const CartItemComponent = ({item}: {item: MenuType}) => {
 export const CartScreen = ({navigation}: any) => {
   const {carts} = useContext(AppContext);
 
+  const total = carts
+    .map(cart => cart.amount)
+    .reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    }, 0);
+
   return (
     <>
       <StatusBar barStyle={'dark-content'} backgroundColor={'#f9f9f9'} />
@@ -219,7 +225,7 @@ export const CartScreen = ({navigation}: any) => {
                     ]}>
                     Total
                   </Text>
-                  <Text style={styles.text}> (3 items)</Text>
+                  <Text style={styles.text}> ({carts.length} items)</Text>
                 </View>
 
                 <Text
@@ -231,7 +237,7 @@ export const CartScreen = ({navigation}: any) => {
                       color: '#151515',
                     },
                   ]}>
-                  &#163;90
+                  &#163;{total}
                 </Text>
               </View>
 
@@ -243,7 +249,7 @@ export const CartScreen = ({navigation}: any) => {
                     styles.text,
                     {color: '#fff', fontFamily: 'Poppins-Medium'},
                   ]}>
-                  Checkout - &#163;90
+                  Checkout - &#163;{total}
                 </Text>
               </TouchableOpacity>
             </View>
