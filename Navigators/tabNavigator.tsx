@@ -149,6 +149,7 @@ export const TabNavigator = () => {
   return (
     <Tab.Navigator
       backBehavior="none"
+      initialRouteName="Menu"
       tabBar={
         keyboardShown ? () => null : props => <TabBarComponent {...props} />
       }
