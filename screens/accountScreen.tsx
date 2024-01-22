@@ -1,19 +1,26 @@
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {useTheme} from 'react-native-paper';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
-export const AccountScreen = ({navigation}: any) => {
-  const theme = useTheme();
-
+export const AccountScreen = () => {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#F9F9F9'}}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContainer}>
-        <View style={styles.container}>
-          <Text style={styles.text}>Account</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <>
+      <StatusBar barStyle={'dark-content'} backgroundColor={'#f9f9f9'} />
+      <SafeAreaView style={{flex: 1, backgroundColor: '#F9F9F9'}}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.scrollContainer}>
+          <View style={styles.container}>
+            <Text style={styles.text}>Account</Text>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
 };
 

@@ -7,10 +7,16 @@ import {
   View,
   Image,
   StatusBar,
+  LogBox,
 } from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 import {MenuType} from '../types';
+import Carousel from 'react-native-snap-carousel';
 import {List} from 'react-native-paper';
+import {useState} from 'react';
+
+// @ignore all logs
+LogBox.ignoreAllLogs();
 
 // product details Header Component
 const HeaderComponent = ({navigation}: any) => {
@@ -38,7 +44,7 @@ const HeaderComponent = ({navigation}: any) => {
   );
 };
 
-// accordion list
+// accordion lists
 const lists = [
   {title: 'Ingredient', id: 1},
   {title: 'Nutritional Information', id: 2},
@@ -48,14 +54,41 @@ const lists = [
   {title: 'Extra', id: 6},
 ];
 
+// @Product card component
 const ProductDetailsCard = ({item}: {item: MenuType}) => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  //render carousel image
+  const _renderItem = ({item, index}: any) => {
+    return (
+      <View style={{flex: 1}} key={index}>
+        <Image source={item} resizeMode="contain" style={styles.image} />
+      </View>
+    );
+  };
+
   return (
     <View style={styles.contentContainer}>
-      <Image
-        source={item.images[0]}
-        resizeMode="contain"
-        style={styles.image}
+      <Carousel
+        loop
+        data={Array.from(item.images)}
+        renderItem={_renderItem}
+        sliderWidth={304}
+        itemWidth={304}
+        sliderHeight={304}
+        itemHeight={304}
+        onSnapToItem={index => setActiveSlide(index)}
+        // layout="tinder"
       />
+      <View style={styles.dots}>
+        {item.images.map((_, i) => (
+          <Text
+            key={i}
+            style={activeSlide === i ? styles.dotActive : styles.dot}>
+            ⬤
+          </Text>
+        ))}
+      </View>
 
       <View style={styles.menuItem}>
         <View style={{marginVertical: 16}}>
@@ -262,7 +295,13 @@ const ProductDetailsCard = ({item}: {item: MenuType}) => {
 };
 
 // @Menu Screen
-export const ProductDetailsScreen = ({navigation, route}: any) => {
+export const ProductDetailsScreen = ({
+  navigation,
+  route,
+}: {
+  navigation: any;
+  route: any;
+}) => {
   const {item} = route.params;
 
   return (
@@ -333,6 +372,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 
+  dots: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  dot: {
+    margin: 5,
+    color: '#D9D9D9',
+  },
+  dotActive: {
+    margin: 5,
+    color: '#DB3C25',
+  },
+
   menuItemHeader: {flex: 1, flexDirection: 'row', justifyContent: 'flex-end'},
 
   menuItem: {
@@ -340,11 +392,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 16,
   },
+
   itemTextContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   menuItemButton: {
     flexDirection: 'row',
     backgroundColor: '#DB3C25',

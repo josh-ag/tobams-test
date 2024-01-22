@@ -1,28 +1,19 @@
 import React from 'react';
-import {
-  //   DarkTheme as NavigatorDarkTheme,
-  DefaultTheme as NavigatorDefaultTheme,
-} from '@react-navigation/native';
+import {DefaultTheme as NavigatorDefaultTheme} from '@react-navigation/native';
 import {
   MD3LightTheme as PaperDefaultTheme,
-  //   MD3DarkTheme as PaperDarkTheme,
   Provider as PaperProvider,
-  adaptNavigationTheme,
 } from 'react-native-paper';
 import merge from 'deepmerge';
 import {fontConfig, typescale} from './configureFont';
 
-// @create adaptive theme for react-navigation
-const {LightTheme} = adaptNavigationTheme({
-  reactNavigationLight: NavigatorDefaultTheme,
-});
-
 //@combine default theme
-export const combineDefaultTheme = merge(PaperDefaultTheme, LightTheme);
+export const combineDefaultTheme = merge(
+  PaperDefaultTheme,
+  NavigatorDefaultTheme,
+);
 
-// @combine dark theme
-// export const combineDarkTheme = merge(PaperDarkTheme, NavigatorDarkTheme);
-
+//@@theme
 export const theme = {
   ...combineDefaultTheme,
   fonts: fontConfig,

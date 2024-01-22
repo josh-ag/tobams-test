@@ -1,36 +1,19 @@
+import {useEffect, useState} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Keyboard, TouchableOpacity} from 'react-native';
 import {HomeScreen} from '../screens';
 import {MenuScreen} from '../screens/menuScreen';
 import {CartScreen} from '../screens/cartScreen';
 import {AccountScreen} from '../screens/accountScreen';
 import Icon from 'react-native-vector-icons/Feather';
 import Svg, {Path} from 'react-native-svg';
-import {MenuStack} from './menuStack';
 
 // init tab navigator
 const Tab = createBottomTabNavigator();
 
-//@Custom Tabbar icons
-// const TabBarIcons = ({focused, size, route, navigation}: any) => {
-//   // const theme = useTheme();
-
-//   // console.log(theme);
-
-//   return (
-//     <View style={styles.tabBarIconContainer}>
-//       {iconName}
-//       <Text
-//         style={[styles.tabBarText, {color: focused ? '#DB3C25' : '#858585'}]}>
-//         {route.name}
-//       </Text>
-//     </View>
-//   );
-// };
-
 const TabBarComponent = ({state, descriptors, navigation}: any) => {
   return (
-    <View style={styles.tabBarStyle}>
+    <View style={[styles.tabBarStyle]}>
       {state.routes.map((route: any, index: number) => {
         const {options} = descriptors[route.key];
         const label =
@@ -146,10 +129,29 @@ const TabBarComponent = ({state, descriptors, navigation}: any) => {
 };
 
 export const TabNavigator = () => {
+  const [keyboardShown, setKeyboardShown] = useState(false);
+
+  useEffect(() => {
+    const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
+      setKeyboardShown(true);
+    });
+
+    const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
+      setKeyboardShown(false);
+    });
+
+    return () => {
+      showSubscription.remove();
+      hideSubscription.remove();
+    };
+  }, []);
+
   return (
     <Tab.Navigator
       backBehavior="none"
-      tabBar={props => <TabBarComponent {...props} />}
+      tabBar={
+        keyboardShown ? () => null : props => <TabBarComponent {...props} />
+      }
       screenOptions={() => ({
         tabBarShowLabel: false,
         headerShown: false,
@@ -169,13 +171,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: 83,
     backgroundColor: '#F9F9F9',
-    shadowColor: '#858585',
-    borderTopColor: '#858585',
-    borderTopWidth: 0.5,
-    shadowOffset: {width: 0, height: 10},
-    shadowOpacity: 0.8,
-    shadowRadius: 5,
-    elevation: 5,
+    borderTopWidth: 0.2,
+    borderRadius: 8,
+    borderBottomColor: ' #E1E5E9',
   },
 
   tabBarButton: {flex: 1, alignItems: 'center', justifyContent: 'center'},

@@ -1,14 +1,15 @@
 **Assessment Project For Tobams Group Internship Program**
 
-[Video](./assets/images/video_proof.mp4)
-![Video](./assets/images/video_proof.mp4)
+[Video](./assets/images/assessement_video.mp4.mp4)
+![Video](./assets/images/assessement_video.mp4.mp4)
 
-![Menu Screen](./assets/images/Menu%20Screen.png)
+![Menu Screen](./assets/images/menu_screen.png.png)
 
-![Checkout Screen](./assets/images/cart_screen.png)
-![Product Details Screen](./assets/images/Product_Details%20Screen.png)
+![Checkout Screen](./assets/images/cart_screen.png.png)
 
-![Product Details Screen](./assets/images/Product%20details%20Scrreen.png)
+![Product Details Screen](./assets/images/product_details_screen.png.png)
+
+![Product Details Screen](./assets/images/product_details_screen2.png.png)
 
 
 >Follow the step to Test in your local machine:
@@ -47,8 +48,7 @@ $pod install
 $ npm start
 ``` 
 
-  Depending on the Test time. This project might experience few more improvement but the above step to reproduce will remain unchange.
- 
+
 _NB: if you encounter any difficulty running this app, be sure to review your development setup with respect to react-native [official documentation](https://reactnative.dev/docs/environment-setup)
 
 **I Hope we build more amazing app together again soonest**

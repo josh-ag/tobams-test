@@ -14,7 +14,11 @@ const menuList: MenuType[] = [
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
     amount: 30,
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Efo Riro',
@@ -22,7 +26,11 @@ const menuList: MenuType[] = [
     amount: 30,
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Asaro',
@@ -30,7 +38,11 @@ const menuList: MenuType[] = [
     amount: 30,
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Chicken Stew',
@@ -38,7 +50,11 @@ const menuList: MenuType[] = [
     amount: 30,
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Moi Moi',
@@ -47,7 +63,11 @@ const menuList: MenuType[] = [
     amount: 30,
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
 
   {
@@ -57,7 +77,11 @@ const menuList: MenuType[] = [
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
     id: 'Mid06',
     amount: 30,
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Asaro (Yam Mix)',
@@ -66,7 +90,11 @@ const menuList: MenuType[] = [
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
     amount: 30,
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Chicken Stew (Yam Mix)',
@@ -75,7 +103,11 @@ const menuList: MenuType[] = [
     variant: '(Beans Cake)',
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Moi Moi',
@@ -84,7 +116,11 @@ const menuList: MenuType[] = [
     variant: '(Beans cake)',
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
 ];
 
@@ -96,7 +132,11 @@ const cartList: MenuType[] = [
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
     amount: 30,
     variant: '(Yam Porridge)',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Africa Donut Mix',
@@ -105,7 +145,11 @@ const cartList: MenuType[] = [
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
     amount: 30,
     variant: '(Yam Porridge)',
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
   {
     name: 'Africa Donut',
@@ -114,7 +158,11 @@ const cartList: MenuType[] = [
     details:
       'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
     amount: 30,
-    images: [require('../assets/images/donuts.png')],
+    images: [
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+      require('../assets/images/donuts.png'),
+    ],
   },
 ];
 

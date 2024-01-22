@@ -34,7 +34,7 @@ const HeaderComponent = ({navigation}: any) => {
       <Text
         style={[
           styles.headerText,
-          {textAlign: 'center', flex: 1, marginRight: '8%'},
+          {textAlign: 'center', flex: 1, marginRight: 24},
         ]}>
         Cart
       </Text>
@@ -273,8 +273,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    borderBottomWidth: 0.5,
-    borderColor: ' #E1E5E9',
+    borderBottomColor: '#E1E5E9',
+    borderBottomWidth: 1,
   },
 
   headerText: {
