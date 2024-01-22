@@ -17,7 +17,7 @@ import {MenuType} from '../types';
 const HeaderComponent = () => {
   return (
     <View style={styles.headerContainer}>
-      <Text style={styles.headerText}>Menu</Text>
+      <Text style={[styles.headerText, {textAlign: 'center'}]}>Menu</Text>
     </View>
   );
 };
@@ -171,10 +171,11 @@ const styles = StyleSheet.create({
 
   headerContainer: {
     height: 72,
+    width: '100%',
     paddingHorizontal: '5%',
     alignSelf: 'center',
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
     borderBottomColor: '#E1E5E9',
     borderBottomWidth: 1,
