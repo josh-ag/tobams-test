@@ -69,6 +69,50 @@ const ProductDetailsCard = ({item}: {item: MenuType}) => {
     );
   };
 
+  const RenderTruncatedText = ({text}: {text: string}) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const truncatedText = isExpanded ? text : `${text.substring(0, 100)}...`;
+
+    return (
+      <View style={styles.truncatedTextContainer}>
+        <Text
+          style={[
+            styles.text,
+            {
+              fontWeight: '400',
+              fontFamily: 'Poppins-Regular',
+              fontSize: 12,
+              color: '#4A4A4A',
+              lineHeight: 18,
+            },
+          ]}>
+          {truncatedText}
+          {!isExpanded && (
+            // <TouchableOpacity
+            //   activeOpacity={1}
+            //   onPress={() => setIsExpanded(true)}>
+            <Text
+              onPress={() => setIsExpanded(true)}
+              style={[
+                styles.text,
+                {
+                  color: '#DB3C25',
+                  fontWeight: '500',
+                  fontFamily: 'Poppins-Regular',
+                  fontSize: 12,
+                  lineHeight: 18,
+                  paddingLeft: 4,
+                },
+              ]}>
+              Read more
+            </Text>
+          )}
+        </Text>
+      </View>
+    );
+  };
+
   return (
     <View style={styles.contentContainer}>
       <Carousel
@@ -127,23 +171,8 @@ const ProductDetailsCard = ({item}: {item: MenuType}) => {
               &#163;{item.amount}
             </Text>
           </View>
-          <View style={{marginBottom: 4}}>
-            <Text
-              numberOfLines={4}
-              ellipsizeMode="tail"
-              style={[
-                styles.text,
-                {
-                  fontWeight: '400',
-                  fontFamily: 'Poppins-Regular',
-                  fontSize: 12,
-                  color: '#4A4A4A',
-                  lineHeight: 18,
-                },
-              ]}>
-              {item.details}
-            </Text>
-          </View>
+
+          <RenderTruncatedText text={item.details} />
         </View>
 
         <View style={styles.accordionContainer}>
@@ -330,12 +359,14 @@ const styles = StyleSheet.create({
   container: {flex: 1, backgroundColor: '#F9F9F9'},
 
   scrollContainer: {width: '100%'},
+
   image: {
     alignSelf: 'center',
     marginBottom: 8,
     width: 327,
     height: 304,
   },
+
   headerContainer: {
     width: '100%',
     height: 72,
@@ -377,17 +408,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 
+  //@carousel dots styles
   dots: {
     flexDirection: 'row',
     justifyContent: 'center',
   },
+
   dot: {
     margin: 5,
     color: '#D9D9D9',
   },
+
   dotActive: {
     margin: 5,
     color: '#DB3C25',
+  },
+
+  truncatedTextContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
 
   menuItemHeader: {flex: 1, flexDirection: 'row', justifyContent: 'flex-end'},

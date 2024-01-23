@@ -12,7 +12,7 @@ const menuList: MenuType[] = [
     name: 'Africa Donut Mix',
     id: 'Mid01',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     amount: 30,
     images: [
       require('../assets/images/donuts.png'),
@@ -25,7 +25,7 @@ const menuList: MenuType[] = [
     id: 'Mid02',
     amount: 30,
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     images: [
       require('../assets/images/donuts.png'),
       require('../assets/images/donuts.png'),
@@ -37,7 +37,7 @@ const menuList: MenuType[] = [
     id: 'Mid03',
     amount: 30,
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     images: [
       require('../assets/images/donuts.png'),
       require('../assets/images/donuts.png'),
@@ -49,7 +49,7 @@ const menuList: MenuType[] = [
     id: 'Mid04',
     amount: 30,
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     images: [
       require('../assets/images/donuts.png'),
       require('../assets/images/donuts.png'),
@@ -62,7 +62,7 @@ const menuList: MenuType[] = [
     variant: '(Beans Cake)',
     amount: 30,
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     images: [
       require('../assets/images/donuts.png'),
       require('../assets/images/donuts.png'),
@@ -74,7 +74,7 @@ const menuList: MenuType[] = [
     name: 'Efo Riro (Yam Mix)',
     variant: '(Yam Porridge)',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     id: 'Mid06',
     amount: 30,
     images: [
@@ -88,7 +88,7 @@ const menuList: MenuType[] = [
     id: 'Mid07',
     variant: '(Yam Porridge)',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     amount: 30,
     images: [
       require('../assets/images/donuts.png'),
@@ -102,7 +102,7 @@ const menuList: MenuType[] = [
     amount: 30,
     variant: '(Beans Cake)',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     images: [
       require('../assets/images/donuts.png'),
       require('../assets/images/donuts.png'),
@@ -115,7 +115,7 @@ const menuList: MenuType[] = [
     amount: 30,
     variant: '(Beans cake)',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     images: [
       require('../assets/images/donuts.png'),
       require('../assets/images/donuts.png'),
@@ -129,7 +129,7 @@ const cartList: MenuType[] = [
     name: 'Africa Donut Mix',
     id: 'Mid01',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     amount: 30,
     variant: '(Yam Porridge)',
     images: [
@@ -142,7 +142,7 @@ const cartList: MenuType[] = [
     name: 'Africa Donut Mix',
     id: 'Mid02',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     amount: 30,
     variant: '(Yam Porridge)',
     images: [
@@ -156,7 +156,7 @@ const cartList: MenuType[] = [
     variant: '(Yam Porridge)',
     id: 'Mid03',
     details:
-      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly o..',
+      'Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly',
     amount: 30,
     images: [
       require('../assets/images/donuts.png'),
