@@ -1,3 +1,4 @@
+import {useRef, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -13,7 +14,6 @@ import Svg, {Path} from 'react-native-svg';
 import {MenuType} from '../types';
 import Carousel from 'react-native-snap-carousel';
 import {List} from 'react-native-paper';
-import {useState} from 'react';
 
 // @ignore all logs
 LogBox.ignoreAllLogs();
@@ -58,6 +58,8 @@ const lists = [
 const ProductDetailsCard = ({item}: {item: MenuType}) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
+  // @carousel refs
+  const carouselRefs = useRef(null);
   //render carousel image
   const _renderItem = ({item, index}: any) => {
     return (
@@ -70,6 +72,7 @@ const ProductDetailsCard = ({item}: {item: MenuType}) => {
   return (
     <View style={styles.contentContainer}>
       <Carousel
+        ref={(c: any) => (carouselRefs.current = c)}
         loop
         data={Array.from(item.images)}
         renderItem={_renderItem}
@@ -81,11 +84,14 @@ const ProductDetailsCard = ({item}: {item: MenuType}) => {
       />
       <View style={styles.dots}>
         {item.images.map((_, i) => (
-          <Text
+          <TouchableOpacity
+            activeOpacity={1}
             key={i}
-            style={activeSlide === i ? styles.dotActive : styles.dot}>
-            ⬤
-          </Text>
+            onPress={() => carouselRefs.current.snapToItem(i)}>
+            <Text style={activeSlide === i ? styles.dotActive : styles.dot}>
+              ⬤
+            </Text>
+          </TouchableOpacity>
         ))}
       </View>
 
